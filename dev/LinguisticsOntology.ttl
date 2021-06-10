@@ -1,0 +1,139 @@
+@prefix : <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology> rdf:type owl:Ontology ;
+                                                                                     owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2021-06-10/LinguisticsOntology> ;
+                                                                                     owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology> ;
+                                                                                     rdfs:label "Linguistics Ontology"@en ;
+                                                                                     rdfs:comment "For representing entities relevant to spoken and written language, with an initial emphasis on descriptive linguistics for syntax, morphology, and phonology."@en ;
+                                                                                     owl:versionInfo "2021-06-10"@en ,
+                                                                                                     "Depends on a subset of v2021-05-01 of CCO."@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme
+cco:EnglishLanguagePhoneme rdf:type owl:Class ;
+                           rdfs:subClassOf cco:Phoneme ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty cco:is_a_nominal_measurement_of ;
+                                             owl:someValuesFrom cco:PhoneSound
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty obo:BFO_0000050 ;
+                                             owl:hasValue cco:EnglishLanguage
+                                           ] ;
+                           cco:alternative_label "English Phoneme"@en ;
+                           cco:definition "A Phoneme that is part of the English Langauge."@en ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                           rdfs:label "English Language Phoneme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme
+cco:Grapheme rdf:type owl:Class ;
+             rdfs:subClassOf cco:WrittenSymbol ;
+             cco:definition "A Written Symbol that is the smallest functional unit of a writing system in a given language."@en ;
+             cco:definition_source "https://en.wikipedia.org/wiki/Grapheme" ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
+             rdfs:comment "A narrow sense of 'grapheme' maintains a direct correspondence and sometimes strict dependance between graphemes and phonemes. However, other senses are broader such that grapheme is considered any functionally contrastive unit, e.g., correspondence with syllables, punctuation, or other meaningful units. Often the sense of 'grapheme' used is necessitated by the particular language being described."@en ;
+             rdfs:label "Grapheme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier
+cco:IPAPhonemeIdentifier rdf:type owl:Class ;
+                         rdfs:subClassOf cco:CodeIdentifier ;
+                         cco:definition "A Code Identifier that designates a Phoneme according to the International Phonetic Alphabet."@en ;
+                         cco:example_of_usage "/s/"@en ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                         rdfs:label "IPA Phoneme Identifier"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Morpheme
+cco:Morpheme rdf:type owl:Class ;
+             rdfs:subClassOf cco:WrittenSymbol ;
+             cco:definition "A Written Symbol that is composed of one or more Graphemes and is the smallest indivisible meaning-bearing unit of a writing system."@en ;
+             cco:definition_source "https://en.wikipedia.org/wiki/Morpheme"^^xsd:anyURI ;
+             cco:example_of_usage "The word 'unbreakable' consists of 3 morphemes: 'un', 'break' and 'able'."@en ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+             rdfs:comment "A Morpheme can be free, eg. 'some' and 'cat', or bound, eg. 'est' an 'ing'."@en ;
+             rdfs:label "Morpheme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PhoneSound
+cco:PhoneSound rdf:type owl:Class ;
+               rdfs:subClassOf cco:SoundWaveProcess ;
+               cco:alternative_label "Phone"@en ;
+               cco:definition "A Sound Wave Process that is produced as part of a Speech Sound Production process and used to form words."@en ;
+               cco:definition_source "https://en.wikipedia.org/wiki/Phonetics"^^xsd:anyURI ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+               rdfs:label "Phone Sound"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Phoneme
+cco:Phoneme rdf:type owl:Class ;
+            rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty cco:is_a_nominal_measurement_of ;
+                              owl:someValuesFrom cco:PhoneSound
+                            ] ;
+            cco:definition "A Descriptive Information Content Entity that nominally describes a Phone Sound which distinguish words in a given language from one another."@en ;
+            cco:definition_source "https://en.wikipedia.org/wiki/Phoneme"^^xsd:anyURI ;
+            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+            rdfs:label "Phoneme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SpeechSoundProduction
+cco:SpeechSoundProduction rdf:type owl:Class ;
+                          rdfs:subClassOf cco:SoundProduction ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty cco:is_cause_of ;
+                                            owl:someValuesFrom cco:PhoneSound
+                                          ] ;
+                          cco:definition "A Sound Production process that concretizes Information Content Entities according to a Language used by an Agent."@en ;
+                          cco:elucidation "The process of making speech sounds is part of a bigger intentional process of using language to communicate. Instances of Speech Sound Production are associated with biological processes of producing sounds, and thus, in-and-of themselves are not strictly intentional."@en ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                          rdfs:label "Speech Sound Production"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/WrittenSymbol
+cco:WrittenSymbol rdf:type owl:Class ;
+                  rdfs:subClassOf cco:InformationBearingArtifact ;
+                  cco:definition "An Information Bearing Artifact that is designed to facilitate written communication."@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
+                  rdfs:label "Written Symbol"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/WrittenWord
+cco:WrittenWord rdf:type owl:Class ;
+                rdfs:subClassOf cco:WrittenSymbol ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty obo:BFO_0000051 ;
+                                  owl:someValuesFrom cco:Morpheme
+                                ] ;
+                cco:alternative_label "Word"@en ;
+                cco:definition "A Written Symbol that is composed of one or more Morphemes and has freestanding semantic or pragmatic content within a given language."@en ;
+                cco:definition_source "https://en.wikipedia.org/wiki/Word" ;
+                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
+                rdfs:label "Written Word"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguage
+cco:EnglishLanguage rdf:type owl:NamedIndividual ,
+                             cco:NautralLanguage ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                    rdfs:label "English Language"@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
