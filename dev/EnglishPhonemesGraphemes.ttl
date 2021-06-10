@@ -1,0 +1,1822 @@
+@prefix : <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/EnglishPhonemesGraphemes> .
+
+<http://www.ontologyrepository.com/CommonCoreOntologies/Domain/EnglishPhonemesGraphemes> rdf:type owl:Ontology ;
+                                                                                          owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2021-06-10/EnglishPhonemesGraphemes> ;
+                                                                                          owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2021-06-10/LinguisticsOntology> ;
+                                                                                          rdfs:label "English Phonemes and Graphemes"@en ;
+                                                                                          rdfs:comment "Instance level representation of 44 English language phonemes and exemplar graphemes."@en ;
+                                                                                          owl:versionInfo "Depends on Linguistics Ontology v2021-06-10"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_a_Sound
+cco:EnglishPhone_a_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__a__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ar__Sound
+cco:EnglishPhone_ar__Sound rdf:type owl:NamedIndividual ,
+                                    cco:PhoneSound ;
+                           cco:is_measured_by_nominal cco:EnglishPhoneme__ar___ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_b_Sound
+cco:EnglishPhone_b_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__b__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ch_Sound
+cco:EnglishPhone_ch_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__ch__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_d_Sound
+cco:EnglishPhone_d_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__d__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_e_Sound
+cco:EnglishPhone_e_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__e__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_f_Sound
+cco:EnglishPhone_f_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__f__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_g_Sound
+cco:EnglishPhone_g_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__g__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_h_Sound
+cco:EnglishPhone_h_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__h__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_i_Sound
+cco:EnglishPhone_i_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__i__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ir__Sound
+cco:EnglishPhone_ir__Sound rdf:type owl:NamedIndividual ,
+                                    cco:PhoneSound ;
+                           cco:is_measured_by_nominal cco:EnglishPhoneme__ir___ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_j_Sound
+cco:EnglishPhone_j_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__j__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_k_Sound
+cco:EnglishPhone_k_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__k__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_l_Sound
+cco:EnglishPhone_l_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__l__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_m_Sound
+cco:EnglishPhone_m_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__m__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_n_Sound
+cco:EnglishPhone_n_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__n__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ng_Sound
+cco:EnglishPhone_ng_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__ng__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_o_Sound
+cco:EnglishPhone_o_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__o__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_oo_Sound
+cco:EnglishPhone_oo_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__oo__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_or__Sound
+cco:EnglishPhone_or__Sound rdf:type owl:NamedIndividual ,
+                                    cco:PhoneSound ;
+                           cco:is_measured_by_nominal cco:EnglishPhoneme__or___ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ow_Sound
+cco:EnglishPhone_ow_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__ow__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_oy_Sound
+cco:EnglishPhone_oy_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__oy__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_p_Sound
+cco:EnglishPhone_p_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__p__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_r_Sound
+cco:EnglishPhone_r_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__r__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_s_Sound
+cco:EnglishPhone_s_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__s__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_sh_Sound
+cco:EnglishPhone_sh_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__sh__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_t_Sound
+cco:EnglishPhone_t_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__t__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_th_not-voiced_Sound
+cco:EnglishPhone_th_not-voiced_Sound rdf:type owl:NamedIndividual ,
+                                              cco:PhoneSound ;
+                                     cco:is_measured_by_nominal cco:EnglishPhoneme__th_not-voiced__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_th_voiced_Sound
+cco:EnglishPhone_th_voiced_Sound rdf:type owl:NamedIndividual ,
+                                          cco:PhoneSound ;
+                                 cco:is_measured_by_nominal cco:EnglishPhoneme__th_voiced__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_u_Sound
+cco:EnglishPhone_u_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__u__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ur__Sound
+cco:EnglishPhone_ur__Sound rdf:type owl:NamedIndividual ,
+                                    cco:PhoneSound ;
+                           cco:is_measured_by_nominal cco:EnglishPhoneme__ur___ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_v_Sound
+cco:EnglishPhone_v_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__v__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_w_Sound
+cco:EnglishPhone_w_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__w__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_wh_with-breath_Sound
+cco:EnglishPhone_wh_with-breath_Sound rdf:type owl:NamedIndividual ,
+                                               cco:PhoneSound ;
+                                      cco:is_measured_by_nominal cco:EnglishPhoneme__wh_with-breath__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_y_Sound
+cco:EnglishPhone_y_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__y__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_z_Sound
+cco:EnglishPhone_z_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__z__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_zh_Sound
+cco:EnglishPhone_zh_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__zh__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ā_Sound
+cco:EnglishPhone_ā_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__ā__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ār__Sound
+cco:EnglishPhone_ār__Sound rdf:type owl:NamedIndividual ,
+                                    cco:PhoneSound ;
+                           cco:is_measured_by_nominal cco:EnglishPhoneme__ār___ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ē_Sound
+cco:EnglishPhone_ē_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__ē__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ī_Sound
+cco:EnglishPhone_ī_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__ī__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ō_Sound
+cco:EnglishPhone_ō_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__ō__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ōō_Sound
+cco:EnglishPhone_ōō_Sound rdf:type owl:NamedIndividual ,
+                                   cco:PhoneSound ;
+                          cco:is_measured_by_nominal cco:EnglishPhoneme__ōō__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhone_ū_Sound
+cco:EnglishPhone_ū_Sound rdf:type owl:NamedIndividual ,
+                                  cco:PhoneSound ;
+                         cco:is_measured_by_nominal cco:EnglishPhoneme__ū__ICE .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__a__ICE
+cco:EnglishPhoneme__a__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N294 ,
+                                                                       cco:Grapheme2_N296 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N295 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ar___ICE
+cco:EnglishPhoneme__ar___ICE rdf:type owl:NamedIndividual ,
+                                      cco:EnglishLanguagePhoneme ;
+                             <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N448 ;
+                             cco:designated_by cco:IPAPhonemeIdentifier1_N449 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__b__ICE
+cco:EnglishPhoneme__b__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N19 ,
+                                                                       cco:Grapheme2_N21 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N20 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ch__ICE
+cco:EnglishPhoneme__ch__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N261 ,
+                                                                        cco:Grapheme2_N263 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N262 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__d__ICE
+cco:EnglishPhoneme__d__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N30 ,
+                                                                       cco:Grapheme2_N32 ,
+                                                                       cco:Grapheme3_N34 ,
+                                                                       cco:Grapheme4_N34 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N31 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__e__ICE
+cco:EnglishPhoneme__e__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N305 ,
+                                                                       cco:Grapheme2_N307 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N306 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__f__ICE
+cco:EnglishPhoneme__f__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N41 ,
+                                                                       cco:Grapheme2_N43 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N42 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__g__ICE
+cco:EnglishPhoneme__g__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N52 ,
+                                                                       cco:Grapheme2_N54 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N53 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__h__ICE
+cco:EnglishPhoneme__h__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N63 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N64 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__i__ICE
+cco:EnglishPhoneme__i__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N316 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N317 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ir___ICE
+cco:EnglishPhoneme__ir___ICE rdf:type owl:NamedIndividual ,
+                                      cco:EnglishLanguagePhoneme ;
+                             <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N470 ,
+                                                                         cco:Grapheme2_N472 ,
+                                                                         cco:Grapheme3_N474 ,
+                                                                         cco:Grapheme4_N474 ;
+                             cco:designated_by cco:IPAPhonemeIdentifier1_N471 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__j__ICE
+cco:EnglishPhoneme__j__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N74 ,
+                                                                       cco:Grapheme2_N76 ,
+                                                                       cco:Grapheme3_N78 ,
+                                                                       cco:Grapheme4_N78 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N75 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__k__ICE
+cco:EnglishPhoneme__k__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N85 ,
+                                                                       cco:Grapheme2_N87 ,
+                                                                       cco:Grapheme3_N89 ,
+                                                                       cco:Grapheme4_N89 ,
+                                                                       cco:Grapheme5_N91 ,
+                                                                       cco:Grapheme6_N90 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N86 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__l__ICE
+cco:EnglishPhoneme__l__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N96 ,
+                                                                       cco:Grapheme2_N98 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N97 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__m__ICE
+cco:EnglishPhoneme__m__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N107 ,
+                                                                       cco:Grapheme2_N109 ,
+                                                                       cco:Grapheme3_N111 ,
+                                                                       cco:Grapheme4_N111 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N108 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__n__ICE
+cco:EnglishPhoneme__n__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N118 ,
+                                                                       cco:Grapheme2_N120 ,
+                                                                       cco:Grapheme3_N122 ,
+                                                                       cco:Grapheme4_N122 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N119 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ng__ICE
+cco:EnglishPhoneme__ng__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N239 ,
+                                                                        cco:Grapheme2_N241 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N240 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__o__ICE
+cco:EnglishPhoneme__o__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N327 ,
+                                                                       cco:Grapheme2_N329 ,
+                                                                       cco:Grapheme3_N331 ,
+                                                                       cco:Grapheme4_N331 ,
+                                                                       cco:Grapheme5_N333 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N328 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__oo__ICE
+cco:EnglishPhoneme__oo__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N404 ,
+                                                                        cco:Grapheme2_N406 ,
+                                                                        cco:Grapheme3_N408 ,
+                                                                        cco:Grapheme4_N408 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N405 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__or___ICE
+cco:EnglishPhoneme__or___ICE rdf:type owl:NamedIndividual ,
+                                      cco:EnglishLanguagePhoneme ;
+                             <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N481 ,
+                                                                         cco:Grapheme2_N483 ,
+                                                                         cco:Grapheme3_N485 ,
+                                                                         cco:Grapheme4_N485 ;
+                             cco:designated_by cco:IPAPhonemeIdentifier1_N482 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ow__ICE
+cco:EnglishPhoneme__ow__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N426 ,
+                                                                        cco:Grapheme2_N428 ,
+                                                                        cco:Grapheme3_N430 ,
+                                                                        cco:Grapheme4_N430 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N427 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__oy__ICE
+cco:EnglishPhoneme__oy__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N437 ,
+                                                                        cco:Grapheme2_N439 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N438 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__p__ICE
+cco:EnglishPhoneme__p__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N129 ,
+                                                                       cco:Grapheme2_N131 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N130 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__r__ICE
+cco:EnglishPhoneme__r__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N140 ,
+                                                                       cco:Grapheme2_N142 ,
+                                                                       cco:Grapheme3_N144 ,
+                                                                       cco:Grapheme4_N144 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N141 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__s__ICE
+cco:EnglishPhoneme__s__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N151 ,
+                                                                       cco:Grapheme2_N153 ,
+                                                                       cco:Grapheme3_N155 ,
+                                                                       cco:Grapheme4_N155 ,
+                                                                       cco:Grapheme5_N157 ,
+                                                                       cco:Grapheme6_N156 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N152 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__sh__ICE
+cco:EnglishPhoneme__sh__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N250 ,
+                                                                        cco:Grapheme2_N252 ,
+                                                                        cco:Grapheme3_N254 ,
+                                                                        cco:Grapheme4_N254 ,
+                                                                        cco:Grapheme5_N256 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N251 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__t__ICE
+cco:EnglishPhoneme__t__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N162 ,
+                                                                       cco:Grapheme2_N164 ,
+                                                                       cco:Grapheme3_N166 ,
+                                                                       cco:Grapheme4_N166 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N163 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__th_not-voiced__ICE
+cco:EnglishPhoneme__th_not-voiced__ICE rdf:type owl:NamedIndividual ,
+                                                cco:EnglishLanguagePhoneme ;
+                                       <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N217 ;
+                                       cco:designated_by cco:IPAPhonemeIdentifier1_N218 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__th_voiced__ICE
+cco:EnglishPhoneme__th_voiced__ICE rdf:type owl:NamedIndividual ,
+                                            cco:EnglishLanguagePhoneme ;
+                                   <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N228 ;
+                                   cco:designated_by cco:IPAPhonemeIdentifier1_N229 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__u__ICE
+cco:EnglishPhoneme__u__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N338 ,
+                                                                       cco:Grapheme2_N340 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N339 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ur___ICE
+cco:EnglishPhoneme__ur___ICE rdf:type owl:NamedIndividual ,
+                                      cco:EnglishLanguagePhoneme ;
+                             <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N492 ,
+                                                                         cco:Grapheme2_N494 ,
+                                                                         cco:Grapheme3_N496 ,
+                                                                         cco:Grapheme4_N496 ,
+                                                                         cco:Grapheme5_N498 ,
+                                                                         cco:Grapheme6_N497 ;
+                             cco:designated_by cco:IPAPhonemeIdentifier1_N493 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__v__ICE
+cco:EnglishPhoneme__v__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N173 ,
+                                                                       cco:Grapheme2_N175 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N174 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__w__ICE
+cco:EnglishPhoneme__w__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N184 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N185 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__wh_with-breath__ICE
+cco:EnglishPhoneme__wh_with-breath__ICE rdf:type owl:NamedIndividual ,
+                                                 cco:EnglishLanguagePhoneme ;
+                                        <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N283 ;
+                                        cco:designated_by cco:IPAPhonemeIdentifier1_N284 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__y__ICE
+cco:EnglishPhoneme__y__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N195 ,
+                                                                       cco:Grapheme2_N197 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N196 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__z__ICE
+cco:EnglishPhoneme__z__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N206 ,
+                                                                       cco:Grapheme2_N208 ,
+                                                                       cco:Grapheme3_N210 ,
+                                                                       cco:Grapheme4_N210 ,
+                                                                       cco:Grapheme5_N212 ,
+                                                                       cco:Grapheme6_N211 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N207 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__zh__ICE
+cco:EnglishPhoneme__zh__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N272 ,
+                                                                        cco:Grapheme2_N274 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N273 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ā__ICE
+cco:EnglishPhoneme__ā__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N349 ,
+                                                                       cco:Grapheme2_N351 ,
+                                                                       cco:Grapheme3_N353 ,
+                                                                       cco:Grapheme4_N353 ,
+                                                                       cco:Grapheme5_N355 ,
+                                                                       cco:Grapheme6_N354 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N350 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ār___ICE
+cco:EnglishPhoneme__ār___ICE rdf:type owl:NamedIndividual ,
+                                      cco:EnglishLanguagePhoneme ;
+                             <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N459 ,
+                                                                         cco:Grapheme2_N461 ,
+                                                                         cco:Grapheme3_N463 ,
+                                                                         cco:Grapheme4_N463 ;
+                             cco:designated_by cco:IPAPhonemeIdentifier1_N460 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ē__ICE
+cco:EnglishPhoneme__ē__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N360 ,
+                                                                       cco:Grapheme2_N362 ,
+                                                                       cco:Grapheme3_N364 ,
+                                                                       cco:Grapheme4_N364 ,
+                                                                       cco:Grapheme5_N366 ,
+                                                                       cco:Grapheme6_N365 ,
+                                                                       cco:Grapheme7_N368 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N361 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ī__ICE
+cco:EnglishPhoneme__ī__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N371 ,
+                                                                       cco:Grapheme2_N373 ,
+                                                                       cco:Grapheme3_N375 ,
+                                                                       cco:Grapheme4_N375 ,
+                                                                       cco:Grapheme5_N377 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N372 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ō__ICE
+cco:EnglishPhoneme__ō__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N382 ,
+                                                                       cco:Grapheme2_N384 ,
+                                                                       cco:Grapheme3_N386 ,
+                                                                       cco:Grapheme4_N386 ,
+                                                                       cco:Grapheme5_N388 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N383 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ōō__ICE
+cco:EnglishPhoneme__ōō__ICE rdf:type owl:NamedIndividual ,
+                                     cco:EnglishLanguagePhoneme ;
+                            <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N415 ,
+                                                                        cco:Grapheme2_N417 ,
+                                                                        cco:Grapheme3_N419 ,
+                                                                        cco:Grapheme4_N419 ;
+                            cco:designated_by cco:IPAPhonemeIdentifier1_N416 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishPhoneme__ū__ICE
+cco:EnglishPhoneme__ū__ICE rdf:type owl:NamedIndividual ,
+                                    cco:EnglishLanguagePhoneme ;
+                           <http://purl.obolibrary.org/obo/RO_0010001> cco:Grapheme1_N393 ,
+                                                                       cco:Grapheme2_N395 ,
+                                                                       cco:Grapheme3_N397 ,
+                                                                       cco:Grapheme4_N397 ;
+                           cco:designated_by cco:IPAPhonemeIdentifier1_N394 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N107
+cco:Grapheme1_N107 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "m" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N118
+cco:Grapheme1_N118 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "n" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N129
+cco:Grapheme1_N129 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "p" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N140
+cco:Grapheme1_N140 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "r" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N151
+cco:Grapheme1_N151 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "s" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N162
+cco:Grapheme1_N162 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "t" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N173
+cco:Grapheme1_N173 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "v" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N184
+cco:Grapheme1_N184 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "w" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N19
+cco:Grapheme1_N19 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "b" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N195
+cco:Grapheme1_N195 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "y" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N206
+cco:Grapheme1_N206 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "z" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N217
+cco:Grapheme1_N217 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "th" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N228
+cco:Grapheme1_N228 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "th" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N239
+cco:Grapheme1_N239 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ng" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N250
+cco:Grapheme1_N250 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "sh" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N261
+cco:Grapheme1_N261 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ch" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N272
+cco:Grapheme1_N272 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ge" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N283
+cco:Grapheme1_N283 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "wh" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N294
+cco:Grapheme1_N294 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "a" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N30
+cco:Grapheme1_N30 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "d" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N305
+cco:Grapheme1_N305 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N316
+cco:Grapheme1_N316 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "i" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N327
+cco:Grapheme1_N327 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "o" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N338
+cco:Grapheme1_N338 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N349
+cco:Grapheme1_N349 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "a" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N360
+cco:Grapheme1_N360 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N371
+cco:Grapheme1_N371 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "i" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N382
+cco:Grapheme1_N382 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "o" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N393
+cco:Grapheme1_N393 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N404
+cco:Grapheme1_N404 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oo" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N41
+cco:Grapheme1_N41 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "f" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N415
+cco:Grapheme1_N415 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oo" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N426
+cco:Grapheme1_N426 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oow" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N437
+cco:Grapheme1_N437 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oi" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N448
+cco:Grapheme1_N448 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ar" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N459
+cco:Grapheme1_N459 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "air" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N470
+cco:Grapheme1_N470 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "irr" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N481
+cco:Grapheme1_N481 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "or" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N492
+cco:Grapheme1_N492 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ur" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N52
+cco:Grapheme1_N52 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "g" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N63
+cco:Grapheme1_N63 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "h" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N74
+cco:Grapheme1_N74 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "j" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N85
+cco:Grapheme1_N85 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "c" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1_N96
+cco:Grapheme1_N96 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "l" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N109
+cco:Grapheme2_N109 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "mm" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N120
+cco:Grapheme2_N120 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "nn" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N131
+cco:Grapheme2_N131 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "pp" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N142
+cco:Grapheme2_N142 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "rr" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N153
+cco:Grapheme2_N153 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "se" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N164
+cco:Grapheme2_N164 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "tt" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N175
+cco:Grapheme2_N175 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ve" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N197
+cco:Grapheme2_N197 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "i" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N208
+cco:Grapheme2_N208 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "zz" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N21
+cco:Grapheme2_N21 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "bb" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N241
+cco:Grapheme2_N241 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "n" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N252
+cco:Grapheme2_N252 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ss" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N263
+cco:Grapheme2_N263 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "tch" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N274
+cco:Grapheme2_N274 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "s" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N296
+cco:Grapheme2_N296 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "au" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N307
+cco:Grapheme2_N307 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ea" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N32
+cco:Grapheme2_N32 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "dd" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N329
+cco:Grapheme2_N329 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "a" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N340
+cco:Grapheme2_N340 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "o" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N351
+cco:Grapheme2_N351 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "a_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N362
+cco:Grapheme2_N362 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "e_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N373
+cco:Grapheme2_N373 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "i_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N384
+cco:Grapheme2_N384 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "o_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N395
+cco:Grapheme2_N395 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N406
+cco:Grapheme2_N406 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N417
+cco:Grapheme2_N417 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N428
+cco:Grapheme2_N428 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ou" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N43
+cco:Grapheme2_N43 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ph" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N439
+cco:Grapheme2_N439 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oy" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N461
+cco:Grapheme2_N461 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ear" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N472
+cco:Grapheme2_N472 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ere" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N483
+cco:Grapheme2_N483 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ore" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N494
+cco:Grapheme2_N494 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ir" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N54
+cco:Grapheme2_N54 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "gg" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N76
+cco:Grapheme2_N76 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "g" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N87
+cco:Grapheme2_N87 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "k" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2_N98
+cco:Grapheme2_N98 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ll" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N111
+cco:Grapheme3_N111 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "mb" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N122
+cco:Grapheme3_N122 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "kn" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N144
+cco:Grapheme3_N144 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "wr" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N155
+cco:Grapheme3_N155 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ss" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N166
+cco:Grapheme3_N166 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ed" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N210
+cco:Grapheme3_N210 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ze" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N254
+cco:Grapheme3_N254 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ch" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N331
+cco:Grapheme3_N331 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "au" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N34
+cco:Grapheme3_N34 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ed" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N353
+cco:Grapheme3_N353 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ay" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N364
+cco:Grapheme3_N364 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ea" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N375
+cco:Grapheme3_N375 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "igh" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N386
+cco:Grapheme3_N386 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oa" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N397
+cco:Grapheme3_N397 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ew" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N408
+cco:Grapheme3_N408 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oul" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N419
+cco:Grapheme3_N419 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N430
+cco:Grapheme3_N430 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ou_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N463
+cco:Grapheme3_N463 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "are" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N474
+cco:Grapheme3_N474 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "eer" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N485
+cco:Grapheme3_N485 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oor" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N496
+cco:Grapheme3_N496 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "er" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N78
+cco:Grapheme3_N78 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ge" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3_N89
+cco:Grapheme3_N89 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ck" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N111
+cco:Grapheme4_N111 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "mb" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N122
+cco:Grapheme4_N122 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "kn" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N144
+cco:Grapheme4_N144 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "wr" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N155
+cco:Grapheme4_N155 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ss" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N166
+cco:Grapheme4_N166 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ed" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N210
+cco:Grapheme4_N210 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ze" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N254
+cco:Grapheme4_N254 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ch" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N331
+cco:Grapheme4_N331 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "au" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N34
+cco:Grapheme4_N34 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ed" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N353
+cco:Grapheme4_N353 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ay" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N364
+cco:Grapheme4_N364 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ea" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N375
+cco:Grapheme4_N375 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "igh" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N386
+cco:Grapheme4_N386 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oa" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N397
+cco:Grapheme4_N397 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ew" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N408
+cco:Grapheme4_N408 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oul" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N419
+cco:Grapheme4_N419 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "u_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N430
+cco:Grapheme4_N430 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ou_e" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N463
+cco:Grapheme4_N463 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "are" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N474
+cco:Grapheme4_N474 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "eer" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N485
+cco:Grapheme4_N485 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "oor" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N496
+cco:Grapheme4_N496 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "er" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N78
+cco:Grapheme4_N78 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ge" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4_N89
+cco:Grapheme4_N89 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "ck" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N157
+cco:Grapheme5_N157 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ce" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N212
+cco:Grapheme5_N212 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "se" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N256
+cco:Grapheme5_N256 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ci" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N333
+cco:Grapheme5_N333 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ough" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N355
+cco:Grapheme5_N355 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ey" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N366
+cco:Grapheme5_N366 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ey" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N377
+cco:Grapheme5_N377 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ie" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N388
+cco:Grapheme5_N388 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ow" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N498
+cco:Grapheme5_N498 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "or" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5_N91
+cco:Grapheme5_N91 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "cc" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N156
+cco:Grapheme6_N156 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "sc" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N211
+cco:Grapheme6_N211 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "x" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N354
+cco:Grapheme6_N354 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ei" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N365
+cco:Grapheme6_N365 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ie" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N497
+cco:Grapheme6_N497 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "ar" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6_N90
+cco:Grapheme6_N90 rdf:type owl:NamedIndividual ,
+                           cco:Grapheme ;
+                  cco:has_text_value "que" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7_N368
+cco:Grapheme7_N368 rdf:type owl:NamedIndividual ,
+                            cco:Grapheme ;
+                   cco:has_text_value "y" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N108
+cco:IPAPhonemeIdentifier1_N108 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/m/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N119
+cco:IPAPhonemeIdentifier1_N119 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/n/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N130
+cco:IPAPhonemeIdentifier1_N130 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/p/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N141
+cco:IPAPhonemeIdentifier1_N141 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/r/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N152
+cco:IPAPhonemeIdentifier1_N152 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/s/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N163
+cco:IPAPhonemeIdentifier1_N163 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/t/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N174
+cco:IPAPhonemeIdentifier1_N174 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/v/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N185
+cco:IPAPhonemeIdentifier1_N185 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/w/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N196
+cco:IPAPhonemeIdentifier1_N196 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/y/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N20
+cco:IPAPhonemeIdentifier1_N20 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/b/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N207
+cco:IPAPhonemeIdentifier1_N207 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/z/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N218
+cco:IPAPhonemeIdentifier1_N218 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/th/(not voiced)" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N229
+cco:IPAPhonemeIdentifier1_N229 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/th/(voiced)" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N240
+cco:IPAPhonemeIdentifier1_N240 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ng/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N251
+cco:IPAPhonemeIdentifier1_N251 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/sh/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N262
+cco:IPAPhonemeIdentifier1_N262 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ch/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N273
+cco:IPAPhonemeIdentifier1_N273 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/zh/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N284
+cco:IPAPhonemeIdentifier1_N284 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/wh/(with breath)" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N295
+cco:IPAPhonemeIdentifier1_N295 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/a/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N306
+cco:IPAPhonemeIdentifier1_N306 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/e/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N31
+cco:IPAPhonemeIdentifier1_N31 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/d/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N317
+cco:IPAPhonemeIdentifier1_N317 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/i/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N328
+cco:IPAPhonemeIdentifier1_N328 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/o/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N339
+cco:IPAPhonemeIdentifier1_N339 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/u/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N350
+cco:IPAPhonemeIdentifier1_N350 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ā/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N361
+cco:IPAPhonemeIdentifier1_N361 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ē/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N372
+cco:IPAPhonemeIdentifier1_N372 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ī/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N383
+cco:IPAPhonemeIdentifier1_N383 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ō/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N394
+cco:IPAPhonemeIdentifier1_N394 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ū/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N405
+cco:IPAPhonemeIdentifier1_N405 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/oo/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N416
+cco:IPAPhonemeIdentifier1_N416 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ōō/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N42
+cco:IPAPhonemeIdentifier1_N42 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/f/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N427
+cco:IPAPhonemeIdentifier1_N427 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ow/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N438
+cco:IPAPhonemeIdentifier1_N438 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/oy/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N449
+cco:IPAPhonemeIdentifier1_N449 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/a(r)/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N460
+cco:IPAPhonemeIdentifier1_N460 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/ā(r)/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N471
+cco:IPAPhonemeIdentifier1_N471 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/i(r)/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N482
+cco:IPAPhonemeIdentifier1_N482 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/o(r)/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N493
+cco:IPAPhonemeIdentifier1_N493 rdf:type owl:NamedIndividual ,
+                                        cco:IPAPhonemeIdentifier ;
+                               cco:has_text_value "/u(r)/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N53
+cco:IPAPhonemeIdentifier1_N53 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/g/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N64
+cco:IPAPhonemeIdentifier1_N64 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/h/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N75
+cco:IPAPhonemeIdentifier1_N75 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/j/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N86
+cco:IPAPhonemeIdentifier1_N86 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/k/" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier1_N97
+cco:IPAPhonemeIdentifier1_N97 rdf:type owl:NamedIndividual ,
+                                       cco:IPAPhonemeIdentifier ;
+                              cco:has_text_value "/l/" .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
