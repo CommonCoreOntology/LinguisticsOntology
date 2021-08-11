@@ -9,16 +9,28 @@
 @base <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology> .
 
 <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology> rdf:type owl:Ontology ;
-                                                                                     owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2021-06-10/LinguisticsOntology> ;
+                                                                                     owl:versionIRI <http://www.ontologyrepository.com/CommonCoreOntologies/Domain/2021-08-11/LinguisticsOntology> ;
                                                                                      owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AllCoreOntology> ;
+                                                                                     owl:versionInfo "Depends on a subset of CCO v2021-05-01."@en ;
                                                                                      rdfs:label "Linguistics Ontology"@en ;
                                                                                      rdfs:comment "For representing entities relevant to spoken and written language, with an initial emphasis on descriptive linguistics for syntax, morphology, and phonology."@en ;
-                                                                                     owl:versionInfo "2021-06-10"@en ,
-                                                                                                     "Depends on a subset of v2021-05-01 of CCO."@en .
+                                                                                     owl:versionInfo "2021-08-11"@en .
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/BoundMorpheme
+cco:BoundMorpheme rdf:type owl:Class ;
+                  rdfs:subClassOf cco:Morpheme ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty obo:BFO_0000051 ;
+                                    owl:someValuesFrom cco:Morpheme
+                                  ] ;
+                  cco:definition "A Morpheme that nominally describes one or more glyphs which do not have freestanding semantic or pragmatic content within a given language and must be used in conjunction with one or more Morphemes to form a word."@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
+                  rdfs:label "Bound Morpheme"@en .
+
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme
 cco:EnglishLanguagePhoneme rdf:type owl:Class ;
@@ -37,14 +49,31 @@ cco:EnglishLanguagePhoneme rdf:type owl:Class ;
                            rdfs:label "English Language Phoneme"@en .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Glyph
+cco:Glyph rdf:type owl:Class ;
+          rdfs:subClassOf cco:WrittenSymbol ;
+          cco:definition "A Written Symbol that is a fundamental unit of a writing system."@en ;
+          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+          rdfs:label "Glyph"@en .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme
 cco:Grapheme rdf:type owl:Class ;
-             rdfs:subClassOf cco:WrittenSymbol ;
-             cco:definition "A Written Symbol that is the smallest functional unit of a writing system in a given language."@en ;
+             rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+             cco:definition "An Descriptive Information Content Entity that nominally describes one or more glyphs used to distinguish the smallest functional units in a written language"@en ;
              cco:definition_source "https://en.wikipedia.org/wiki/Grapheme" ;
              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
              rdfs:comment "A narrow sense of 'grapheme' maintains a direct correspondence and sometimes strict dependance between graphemes and phonemes. However, other senses are broader such that grapheme is considered any functionally contrastive unit, e.g., correspondence with syllables, punctuation, or other meaningful units. Often the sense of 'grapheme' used is necessitated by the particular language being described."@en ;
              rdfs:label "Grapheme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAGraphemeIdentifier
+cco:IPAGraphemeIdentifier rdf:type owl:Class ;
+                          rdfs:subClassOf cco:CodeIdentifier ;
+                          cco:definition "A Code Identifier that designates a Grapheme according to the International Phonetic Alphabet."@en ;
+                          cco:example_of_usage "<se>"@en ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                          rdfs:label "IPA Grapheme Identifier"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeIdentifier
@@ -58,8 +87,12 @@ cco:IPAPhonemeIdentifier rdf:type owl:Class ;
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Morpheme
 cco:Morpheme rdf:type owl:Class ;
-             rdfs:subClassOf cco:WrittenSymbol ;
-             cco:definition "A Written Symbol that is composed of one or more Graphemes and is the smallest indivisible meaning-bearing unit of a writing system."@en ;
+             rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty obo:BFO_0000051 ;
+                               owl:someValuesFrom cco:Grapheme
+                             ] ;
+             cco:definition "An Descriptive Information Content Entity that nominally describes one or more glyphs used to distinguish the smallest indivisible meaning-bearing unit in a writing system."@en ;
              cco:definition_source "https://en.wikipedia.org/wiki/Morpheme"^^xsd:anyURI ;
              cco:example_of_usage "The word 'unbreakable' consists of 3 morphemes: 'un', 'break' and 'able'."@en ;
              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
@@ -119,10 +152,30 @@ cco:WrittenWord rdf:type owl:Class ;
                                   owl:someValuesFrom cco:Morpheme
                                 ] ;
                 cco:alternative_label "Word"@en ;
-                cco:definition "A Written Symbol that is composed of one or more Morphemes and has freestanding semantic or pragmatic content within a given language."@en ;
+                cco:definition "A Written Symbol that is composed of one or more Glyphs, and has freestanding semantic or pragmatic content within a given language."@en ;
                 cco:definition_source "https://en.wikipedia.org/wiki/Word" ;
                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
                 rdfs:label "Written Word"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/FreeMorpheme
+<http://www.ontologyrepository.com/CommonCoreOntologies/FreeMorpheme> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf cco:Morpheme ,
+                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                   owl:onProperty obo:BFO_0000051 ;
+                                                                                                                   owl:someValuesFrom cco:Morpheme
+                                                                                                                 ] ;
+                                                                                                 cco:definition "A Morpheme that nominally describes a written word in a given language."@en ;
+                                                                                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/CyberOntology"^^xsd:anyURI ;
+                                                                                                 rdfs:label "Free Morpheme"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GlyphSequence
+<http://www.ontologyrepository.com/CommonCoreOntologies/GlyphSequence> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf cco:WrittenSymbol ;
+                                                                                                  cco:definition "A Written Symbol that is composed of two or more Glyphs."@en ;
+                                                                                                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Domain/LinguisticsOntology"^^xsd:anyURI ;
+                                                                                                  rdfs:label "Glyph Sequence"@en .
 
 
 #################################################################
