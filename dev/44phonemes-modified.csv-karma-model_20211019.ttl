@@ -1,0 +1,4181 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix km-dev: <http://isi.edu/integration/karma/dev#> .
+
+_:node1ficd3vmdx1 a km-dev:R2RMLMapping ;
+	km-dev:sourceName "44phonemes-modified.csv" ;
+	km-dev:modelPublicationTime "1634651471566"^^xsd:long ;
+	km-dev:modelVersion "1.7" ;
+	km-dev:hasModelLabel "44phonemes-modified.csv" ;
+	km-dev:hasBaseURI "http://localhost:8080/source/" ;
+	km-dev:hasWorksheetHistory """[
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Phoneme\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"phoneme_ID\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'EnglishPhoneme'+name+'ICE'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phoneme_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Phoneme\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"phone_ID\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'EnglishPhone'+name+'Sound'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phone_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Graphemes: G1\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g1-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"Graphemes: G1\\\")\\np_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Graphemes: G1\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g1-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G2\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"gr-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G2\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G2\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"gr-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G3\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g3-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G3\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G3\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g3-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G4\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g4-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G4\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G4\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g4-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G5\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g5-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G5\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G5\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g5-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G6\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g6-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G6\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G6\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g6-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G7\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"g7-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"g_name = getValue(\\\"G7\\\")\\nif g_name == \\\"\\\":\\n    return\\nelse:\\n    p_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\n    nsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\n    return nsp+'Phoneme'+p_name+'Grapheme-'+g_name+'-IBA'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"G7\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g7-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Phoneme\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"lang-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"return 'http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguage'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"lang-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Allophones: A1\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"a1-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"a_name = getValue(\\\"Allophones: A1\\\")\\nif a_name == \\\"\\\":\\n    return\\np_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'Phoneme'+p_name+'Allophone-'+a_name+'-ICE'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Allophones: A1\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a1-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"A2\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"a2-uri\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"a_name = getValue(\\\"A2\\\")\\nif a_name == \\\"\\\":\\n    return\\np_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'Phoneme'+p_name+'Allophone-'+a_name+'-ICE'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"A2\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a2-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"SubmitPythonTransformationCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"A3\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"newColumnName\",
+                \"type\": \"other\",
+                \"value\": \"a3-\"
+            },
+            {
+                \"name\": \"transformationCode\",
+                \"type\": \"other\",
+                \"value\": \"a_name = getValue(\\\"A3\\\")\\nif a_name == \\\"\\\":\\n    return\\np_name = getValue(\\\"Phoneme\\\").replace('/','_').replace(' ','-').replace('(','').replace(')','_')\\nnsp = 'http://www.ontologyrepository.com/CommonCoreOntologies/'\\nreturn nsp+'Phoneme'+p_name+'Allophone-'+a_name+'-ICE'\"
+            },
+            {
+                \"name\": \"errorDefaultValue\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"isJSONOutput\",
+                \"type\": \"other\",
+                \"value\": \"false\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]},{\\\"value\\\":[{\\\"columnName\\\":\\\"A3\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a3-\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"Transformation\"]
+    },
+    {
+        \"commandName\": \"RefreshSuperSelectionCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [
+            \"Selection\",
+            \"IgnoreInBatch\"
+        ]
+    },
+    {
+        \"commandName\": \"RefreshSuperSelectionCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [
+            \"Selection\",
+            \"IgnoreInBatch\"
+        ]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Phoneme\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeDesignator\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeDesignator1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:IPAPhonemeDesignator1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Phoneme\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"phoneme_ID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/AmericanEnglishPhoneme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/AmericanEnglishPhoneme1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/AmericanEnglishPhoneme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/AmericanEnglishPhoneme1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:AmericanEnglishPhoneme1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phoneme_ID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phoneme_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"phone_ID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Phone1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phone_ID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phone_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"phoneme_ID\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\"
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phoneme_ID\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"phoneme_ID\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g1-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g1-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g1-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"gr-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"gr-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"gr-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g7-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme7\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g7-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g7-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g6-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme6\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g6-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g6-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g5-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme5\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g5-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g5-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g4-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme4\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g4-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g4-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"g3-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Grapheme3\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g3-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"g3-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Graphemes: G1\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph1 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Graphemes: G1\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Graphemes: G1\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G2\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph2 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G2\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G2\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G3\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph3\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph3 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G3\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G3\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G4\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph4\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph4 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G4\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G4\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G5\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph5\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph5\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G5\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G5\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G6\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph6\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph6 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G6\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G6\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"G7\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph7\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:Glyph7 (add)\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G7\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"G7\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"Allophones: A1\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:IPAAllophoneIdentifier1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Allophones: A1\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"Allophones: A1\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"a1-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone1\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone1\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Allophone1\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a1-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a1-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"A2\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:IPAAllophoneIdentifier2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"A2\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"A2\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"a2-uri\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone2\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone2\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Allophone2\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a2-uri\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a2-uri\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetSemanticTypeCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"A3\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier3\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value\",
+                    \"DomainLabel\": \"cco:IPAAllophoneIdentifier3\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"A3\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"A3\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"SetMetaPropertyCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"hNodeId\",
+                \"type\": \"hNodeId\",
+                \"value\": [{\"columnName\": \"a3-\"}]
+            },
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"selectionName\",
+                \"type\": \"other\",
+                \"value\": \"DEFAULT_TEST\"
+            },
+            {
+                \"name\": \"metaPropertyName\",
+                \"type\": \"other\",
+                \"value\": \"isUriOfClass\"
+            },
+            {
+                \"name\": \"metaPropertyUri\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+            },
+            {
+                \"name\": \"metaPropertyId\",
+                \"type\": \"other\",
+                \"value\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone3\"
+            },
+            {
+                \"name\": \"SemanticTypesArray\",
+                \"type\": \"other\",
+                \"value\": [{
+                    \"DomainUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"DomainId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone3\",
+                    \"isPrimary\": true,
+                    \"isProvenance\": false,
+                    \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"DomainLabel\": \"cco:Allophone3\"
+                }]
+            },
+            {
+                \"name\": \"trainAndShowUpdates\",
+                \"type\": \"other\",
+                \"value\": true
+            },
+            {
+                \"name\": \"rdfLiteralType\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"language\",
+                \"type\": \"other\",
+                \"value\": \"\"
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a3-\\\"}]}]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[{\\\"value\\\":[{\\\"columnName\\\":\\\"a3-\\\"}]}]\"
+            }
+        ],
+        \"tags\": [\"SemanticType\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeDesignator1\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/designated_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeDesignator\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_measured_by_nominal\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Phone\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/represented_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier1\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/designated_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier2\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/designated_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone2\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier3\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/designated_by\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone3\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone1\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/BFO_0000051\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone2\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/BFO_0000051\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone3\",
+                    \"edgeId\": \"http://purl.obolibrary.org/obo/BFO_0000051\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Allophone\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph1\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph2\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph3\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph4\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph5\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph6\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    },
+    {
+        \"commandName\": \"AddLinkCommand\",
+        \"model\": \"new\",
+        \"inputParameters\": [
+            {
+                \"name\": \"worksheetId\",
+                \"type\": \"worksheetId\",
+                \"value\": \"W\"
+            },
+            {
+                \"name\": \"edge\",
+                \"type\": \"other\",
+                \"value\": {
+                    \"edgeTargetId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph7\",
+                    \"edgeId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of\",
+                    \"edgeTargetUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Glyph\",
+                    \"edgeSourceId\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7\",
+                    \"edgeSourceUri\": \"http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme\"
+                }
+            },
+            {
+                \"name\": \"inputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            },
+            {
+                \"name\": \"outputColumns\",
+                \"type\": \"hNodeIdList\",
+                \"value\": \"[]\"
+            }
+        ],
+        \"tags\": [\"Modeling\"]
+    }
+]""" .
+
+km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 .
+
+km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx2 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx2 .
+
+km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 rr:logicalTable _:node1ficd3vmdx2 ;
+	rr:subjectMap _:node1ficd3vmdx3 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx3 .
+
+_:node1ficd3vmdx3 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Allophone1" ;
+	rr:class cco:Allophone ;
+	rr:template "{a1-uri}" .
+
+km-dev:PredicateObjectMap_c997cef5-3041-48b4-8371-ef1a1d6db4b5 rr:predicate cco:designated_by .
+
+km-dev:RefObjectMap_b17186f3-7bbd-4c11-b0f0-6e413c5f1469 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_b17186f3-7bbd-4c11-b0f0-6e413c5f1469 .
+
+km-dev:PredicateObjectMap_c997cef5-3041-48b4-8371-ef1a1d6db4b5 rr:objectMap km-dev:RefObjectMap_b17186f3-7bbd-4c11-b0f0-6e413c5f1469 .
+
+km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 rr:predicateObjectMap km-dev:PredicateObjectMap_c997cef5-3041-48b4-8371-ef1a1d6db4b5 .
+
+km-dev:PredicateObjectMap_c997cef5-3041-48b4-8371-ef1a1d6db4b5 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c997cef5-3041-48b4-8371-ef1a1d6db4b5 .
+
+km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 .
+
+km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx4 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx4 .
+
+km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 rr:logicalTable _:node1ficd3vmdx4 ;
+	rr:subjectMap _:node1ficd3vmdx5 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx5 .
+
+_:node1ficd3vmdx5 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier1" ;
+	rr:class cco:IPAAllophoneIdentifier ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:IPAAllophoneIdentifier1" .
+
+km-dev:PredicateObjectMap_364ae8d3-a462-4330-bf24-0f63626ef3d6 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx6 rr:column "Allophones: A1" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx6 .
+
+km-dev:PredicateObjectMap_364ae8d3-a462-4330-bf24-0f63626ef3d6 rr:objectMap _:node1ficd3vmdx6 .
+
+km-dev:TriplesMap_7e7f1dc4-e9b5-46ad-9f09-73dcd6bad105 rr:predicateObjectMap km-dev:PredicateObjectMap_364ae8d3-a462-4330-bf24-0f63626ef3d6 .
+
+km-dev:PredicateObjectMap_364ae8d3-a462-4330-bf24-0f63626ef3d6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_364ae8d3-a462-4330-bf24-0f63626ef3d6 .
+
+km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 .
+
+km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx7 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx7 .
+
+km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 rr:logicalTable _:node1ficd3vmdx7 ;
+	rr:subjectMap _:node1ficd3vmdx8 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx8 .
+
+_:node1ficd3vmdx8 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Allophone2" ;
+	rr:class cco:Allophone ;
+	rr:template "{a2-uri}" .
+
+km-dev:PredicateObjectMap_9896e945-6fc2-467f-8d48-738a09dcdeb7 rr:predicate cco:designated_by .
+
+km-dev:RefObjectMap_0a35f8f4-1992-4cd6-a283-cae7f6cd9ea7 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_0a35f8f4-1992-4cd6-a283-cae7f6cd9ea7 .
+
+km-dev:PredicateObjectMap_9896e945-6fc2-467f-8d48-738a09dcdeb7 rr:objectMap km-dev:RefObjectMap_0a35f8f4-1992-4cd6-a283-cae7f6cd9ea7 .
+
+km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 rr:predicateObjectMap km-dev:PredicateObjectMap_9896e945-6fc2-467f-8d48-738a09dcdeb7 .
+
+km-dev:PredicateObjectMap_9896e945-6fc2-467f-8d48-738a09dcdeb7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9896e945-6fc2-467f-8d48-738a09dcdeb7 .
+
+km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f .
+
+km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx9 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx9 .
+
+km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f rr:logicalTable _:node1ficd3vmdx9 ;
+	rr:subjectMap _:node1ficd3vmdx10 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx10 .
+
+_:node1ficd3vmdx10 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier2" ;
+	rr:class cco:IPAAllophoneIdentifier ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:IPAAllophoneIdentifier2" .
+
+km-dev:PredicateObjectMap_1808b567-4d48-466d-85b6-3188387064f4 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx11 rr:column "A2" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx11 .
+
+km-dev:PredicateObjectMap_1808b567-4d48-466d-85b6-3188387064f4 rr:objectMap _:node1ficd3vmdx11 .
+
+km-dev:TriplesMap_d2c7f6ce-a361-4e35-a463-5b34e115911f rr:predicateObjectMap km-dev:PredicateObjectMap_1808b567-4d48-466d-85b6-3188387064f4 .
+
+km-dev:PredicateObjectMap_1808b567-4d48-466d-85b6-3188387064f4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1808b567-4d48-466d-85b6-3188387064f4 .
+
+km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 .
+
+km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx12 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx12 .
+
+km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 rr:logicalTable _:node1ficd3vmdx12 ;
+	rr:subjectMap _:node1ficd3vmdx13 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx13 .
+
+_:node1ficd3vmdx13 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Allophone3" ;
+	rr:class cco:Allophone ;
+	rr:template "{a3-}" .
+
+km-dev:PredicateObjectMap_f8ccf129-a85c-44a5-a761-15ae2913fb82 rr:predicate cco:designated_by .
+
+km-dev:RefObjectMap_6d606f39-0007-4e91-9357-b0187dba4b84 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_6d606f39-0007-4e91-9357-b0187dba4b84 .
+
+km-dev:PredicateObjectMap_f8ccf129-a85c-44a5-a761-15ae2913fb82 rr:objectMap km-dev:RefObjectMap_6d606f39-0007-4e91-9357-b0187dba4b84 .
+
+km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 rr:predicateObjectMap km-dev:PredicateObjectMap_f8ccf129-a85c-44a5-a761-15ae2913fb82 .
+
+km-dev:PredicateObjectMap_f8ccf129-a85c-44a5-a761-15ae2913fb82 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f8ccf129-a85c-44a5-a761-15ae2913fb82 .
+
+km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c .
+
+km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx14 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx14 .
+
+km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c rr:logicalTable _:node1ficd3vmdx14 ;
+	rr:subjectMap _:node1ficd3vmdx15 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx15 .
+
+_:node1ficd3vmdx15 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/IPAAllophoneIdentifier3" ;
+	rr:class cco:IPAAllophoneIdentifier ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:IPAAllophoneIdentifier3" .
+
+km-dev:PredicateObjectMap_f3fb292e-639f-4a24-aa77-9e719312a48a rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx16 rr:column "A3" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx16 .
+
+km-dev:PredicateObjectMap_f3fb292e-639f-4a24-aa77-9e719312a48a rr:objectMap _:node1ficd3vmdx16 .
+
+km-dev:TriplesMap_c97af933-da14-406e-bab1-c16bd8e83b7c rr:predicateObjectMap km-dev:PredicateObjectMap_f3fb292e-639f-4a24-aa77-9e719312a48a .
+
+km-dev:PredicateObjectMap_f3fb292e-639f-4a24-aa77-9e719312a48a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f3fb292e-639f-4a24-aa77-9e719312a48a .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx17 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx17 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:logicalTable _:node1ficd3vmdx17 ;
+	rr:subjectMap _:node1ficd3vmdx18 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx18 .
+
+_:node1ficd3vmdx18 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/EnglishLanguagePhoneme1" ;
+	rr:class cco:EnglishLanguagePhoneme ;
+	rr:template "{phoneme_ID}" .
+
+km-dev:PredicateObjectMap_fa3118a9-8d6d-4657-9e54-92ff255afbec rr:predicate obo:BFO_0000051 .
+
+km-dev:RefObjectMap_da3df878-3ab7-429b-a2b0-7b116e56f22c a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_ed52d735-4d24-4f3d-9e4c-16eb88fd0fe4 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_da3df878-3ab7-429b-a2b0-7b116e56f22c .
+
+km-dev:PredicateObjectMap_fa3118a9-8d6d-4657-9e54-92ff255afbec rr:objectMap km-dev:RefObjectMap_da3df878-3ab7-429b-a2b0-7b116e56f22c .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_fa3118a9-8d6d-4657-9e54-92ff255afbec .
+
+km-dev:PredicateObjectMap_fa3118a9-8d6d-4657-9e54-92ff255afbec a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fa3118a9-8d6d-4657-9e54-92ff255afbec .
+
+km-dev:PredicateObjectMap_d33807e1-7175-4714-8490-06b5e0cb1d32 rr:predicate obo:BFO_0000051 .
+
+km-dev:RefObjectMap_88e5a64d-d792-4f7f-a06d-b2761c23102b a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_72a30408-9880-48e7-9977-56c14e8af7e1 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_88e5a64d-d792-4f7f-a06d-b2761c23102b .
+
+km-dev:PredicateObjectMap_d33807e1-7175-4714-8490-06b5e0cb1d32 rr:objectMap km-dev:RefObjectMap_88e5a64d-d792-4f7f-a06d-b2761c23102b .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_d33807e1-7175-4714-8490-06b5e0cb1d32 .
+
+km-dev:PredicateObjectMap_d33807e1-7175-4714-8490-06b5e0cb1d32 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d33807e1-7175-4714-8490-06b5e0cb1d32 .
+
+km-dev:PredicateObjectMap_1ee75a99-8524-4bab-afe9-ba22dd7cf3da rr:predicate obo:BFO_0000051 .
+
+km-dev:RefObjectMap_453d5d49-5aab-4c3a-b2d0-5de714ac9d58 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1efb8e22-3110-4832-8c91-2bea10ac04a4 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_453d5d49-5aab-4c3a-b2d0-5de714ac9d58 .
+
+km-dev:PredicateObjectMap_1ee75a99-8524-4bab-afe9-ba22dd7cf3da rr:objectMap km-dev:RefObjectMap_453d5d49-5aab-4c3a-b2d0-5de714ac9d58 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_1ee75a99-8524-4bab-afe9-ba22dd7cf3da .
+
+km-dev:PredicateObjectMap_1ee75a99-8524-4bab-afe9-ba22dd7cf3da a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1ee75a99-8524-4bab-afe9-ba22dd7cf3da .
+
+km-dev:PredicateObjectMap_dc01e1c3-5acd-4a33-8e07-b423450bdabc rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_597b6599-2133-4c59-8dc2-ee90d9ad89d4 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_597b6599-2133-4c59-8dc2-ee90d9ad89d4 .
+
+km-dev:PredicateObjectMap_dc01e1c3-5acd-4a33-8e07-b423450bdabc rr:objectMap km-dev:RefObjectMap_597b6599-2133-4c59-8dc2-ee90d9ad89d4 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_dc01e1c3-5acd-4a33-8e07-b423450bdabc .
+
+km-dev:PredicateObjectMap_dc01e1c3-5acd-4a33-8e07-b423450bdabc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dc01e1c3-5acd-4a33-8e07-b423450bdabc .
+
+km-dev:PredicateObjectMap_a441002a-5ee9-4e6e-a6f2-8e76fc74b76b rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_12c066fb-e810-4415-b8b6-c8da923857ef a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_12c066fb-e810-4415-b8b6-c8da923857ef .
+
+km-dev:PredicateObjectMap_a441002a-5ee9-4e6e-a6f2-8e76fc74b76b rr:objectMap km-dev:RefObjectMap_12c066fb-e810-4415-b8b6-c8da923857ef .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_a441002a-5ee9-4e6e-a6f2-8e76fc74b76b .
+
+km-dev:PredicateObjectMap_a441002a-5ee9-4e6e-a6f2-8e76fc74b76b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a441002a-5ee9-4e6e-a6f2-8e76fc74b76b .
+
+km-dev:PredicateObjectMap_7003ecb9-68ae-4897-9cac-db34819b1ed4 rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_b8912fea-de48-4f21-bc45-5ba2a83fc69d a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_b8912fea-de48-4f21-bc45-5ba2a83fc69d .
+
+km-dev:PredicateObjectMap_7003ecb9-68ae-4897-9cac-db34819b1ed4 rr:objectMap km-dev:RefObjectMap_b8912fea-de48-4f21-bc45-5ba2a83fc69d .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_7003ecb9-68ae-4897-9cac-db34819b1ed4 .
+
+km-dev:PredicateObjectMap_7003ecb9-68ae-4897-9cac-db34819b1ed4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7003ecb9-68ae-4897-9cac-db34819b1ed4 .
+
+km-dev:PredicateObjectMap_21095078-bbde-4770-aca0-02449c0be4ff rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_9ae29602-c05a-4ec5-9828-b4d95e335c04 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_9ae29602-c05a-4ec5-9828-b4d95e335c04 .
+
+km-dev:PredicateObjectMap_21095078-bbde-4770-aca0-02449c0be4ff rr:objectMap km-dev:RefObjectMap_9ae29602-c05a-4ec5-9828-b4d95e335c04 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_21095078-bbde-4770-aca0-02449c0be4ff .
+
+km-dev:PredicateObjectMap_21095078-bbde-4770-aca0-02449c0be4ff a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_21095078-bbde-4770-aca0-02449c0be4ff .
+
+km-dev:PredicateObjectMap_b116bb43-e15c-4eef-8a74-d40b59f7868a rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_98219e99-4601-4ec6-97a0-eac8609dec79 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_98219e99-4601-4ec6-97a0-eac8609dec79 .
+
+km-dev:PredicateObjectMap_b116bb43-e15c-4eef-8a74-d40b59f7868a rr:objectMap km-dev:RefObjectMap_98219e99-4601-4ec6-97a0-eac8609dec79 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_b116bb43-e15c-4eef-8a74-d40b59f7868a .
+
+km-dev:PredicateObjectMap_b116bb43-e15c-4eef-8a74-d40b59f7868a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b116bb43-e15c-4eef-8a74-d40b59f7868a .
+
+km-dev:PredicateObjectMap_739b7a81-a110-4e68-b042-71ec4722cf12 rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_53f4b6e1-cc6a-48b1-89ff-a5e202b083f5 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_53f4b6e1-cc6a-48b1-89ff-a5e202b083f5 .
+
+km-dev:PredicateObjectMap_739b7a81-a110-4e68-b042-71ec4722cf12 rr:objectMap km-dev:RefObjectMap_53f4b6e1-cc6a-48b1-89ff-a5e202b083f5 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_739b7a81-a110-4e68-b042-71ec4722cf12 .
+
+km-dev:PredicateObjectMap_739b7a81-a110-4e68-b042-71ec4722cf12 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_739b7a81-a110-4e68-b042-71ec4722cf12 .
+
+km-dev:PredicateObjectMap_8ffc1337-1dc3-472b-9404-089cfb401b79 rr:predicate cco:represented_by .
+
+km-dev:RefObjectMap_87f15868-dfb2-4b66-8d6a-5981b0590d11 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_87f15868-dfb2-4b66-8d6a-5981b0590d11 .
+
+km-dev:PredicateObjectMap_8ffc1337-1dc3-472b-9404-089cfb401b79 rr:objectMap km-dev:RefObjectMap_87f15868-dfb2-4b66-8d6a-5981b0590d11 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_8ffc1337-1dc3-472b-9404-089cfb401b79 .
+
+km-dev:PredicateObjectMap_8ffc1337-1dc3-472b-9404-089cfb401b79 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8ffc1337-1dc3-472b-9404-089cfb401b79 .
+
+km-dev:PredicateObjectMap_5bececc8-68ec-4c78-8241-6c34c2eb5120 rr:predicate cco:designated_by .
+
+km-dev:RefObjectMap_f5158f07-e825-472a-b65b-de72c0065634 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_f5158f07-e825-472a-b65b-de72c0065634 .
+
+km-dev:PredicateObjectMap_5bececc8-68ec-4c78-8241-6c34c2eb5120 rr:objectMap km-dev:RefObjectMap_f5158f07-e825-472a-b65b-de72c0065634 .
+
+km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 rr:predicateObjectMap km-dev:PredicateObjectMap_5bececc8-68ec-4c78-8241-6c34c2eb5120 .
+
+km-dev:PredicateObjectMap_5bececc8-68ec-4c78-8241-6c34c2eb5120 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5bececc8-68ec-4c78-8241-6c34c2eb5120 .
+
+km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 .
+
+km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx19 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx19 .
+
+km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 rr:logicalTable _:node1ficd3vmdx19 ;
+	rr:subjectMap _:node1ficd3vmdx20 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx20 .
+
+_:node1ficd3vmdx20 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme1" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g1-uri}" .
+
+km-dev:PredicateObjectMap_d9562ea8-32ff-44ef-b10e-0efae03de5a9 rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_beb482e7-6e14-44b9-abd9-589ed1c97d38 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_beb482e7-6e14-44b9-abd9-589ed1c97d38 .
+
+km-dev:PredicateObjectMap_d9562ea8-32ff-44ef-b10e-0efae03de5a9 rr:objectMap km-dev:RefObjectMap_beb482e7-6e14-44b9-abd9-589ed1c97d38 .
+
+km-dev:TriplesMap_3e653105-3cc2-4996-bf3d-49c1384aa469 rr:predicateObjectMap km-dev:PredicateObjectMap_d9562ea8-32ff-44ef-b10e-0efae03de5a9 .
+
+km-dev:PredicateObjectMap_d9562ea8-32ff-44ef-b10e-0efae03de5a9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d9562ea8-32ff-44ef-b10e-0efae03de5a9 .
+
+km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf .
+
+km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx21 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx21 .
+
+km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf rr:logicalTable _:node1ficd3vmdx21 ;
+	rr:subjectMap _:node1ficd3vmdx22 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx22 .
+
+_:node1ficd3vmdx22 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme2" ;
+	rr:class cco:Grapheme ;
+	rr:template "{gr-uri}" .
+
+km-dev:PredicateObjectMap_ee17b97b-147e-471e-b367-03a59f4e4034 rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_9b57b393-25e9-49bf-a03f-b3eaf50238e6 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_9b57b393-25e9-49bf-a03f-b3eaf50238e6 .
+
+km-dev:PredicateObjectMap_ee17b97b-147e-471e-b367-03a59f4e4034 rr:objectMap km-dev:RefObjectMap_9b57b393-25e9-49bf-a03f-b3eaf50238e6 .
+
+km-dev:TriplesMap_08a77810-2687-46c3-952f-1179c31e28cf rr:predicateObjectMap km-dev:PredicateObjectMap_ee17b97b-147e-471e-b367-03a59f4e4034 .
+
+km-dev:PredicateObjectMap_ee17b97b-147e-471e-b367-03a59f4e4034 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ee17b97b-147e-471e-b367-03a59f4e4034 .
+
+km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 .
+
+km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx23 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx23 .
+
+km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 rr:logicalTable _:node1ficd3vmdx23 ;
+	rr:subjectMap _:node1ficd3vmdx24 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx24 .
+
+_:node1ficd3vmdx24 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme3" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g3-uri}" .
+
+km-dev:PredicateObjectMap_e6407059-8369-47e0-9c42-75622ac702a9 rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_31260000-973d-45d7-9bb6-755b34ded437 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_31260000-973d-45d7-9bb6-755b34ded437 .
+
+km-dev:PredicateObjectMap_e6407059-8369-47e0-9c42-75622ac702a9 rr:objectMap km-dev:RefObjectMap_31260000-973d-45d7-9bb6-755b34ded437 .
+
+km-dev:TriplesMap_b33beb1d-7618-4a4d-90b5-8054e9189fb6 rr:predicateObjectMap km-dev:PredicateObjectMap_e6407059-8369-47e0-9c42-75622ac702a9 .
+
+km-dev:PredicateObjectMap_e6407059-8369-47e0-9c42-75622ac702a9 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e6407059-8369-47e0-9c42-75622ac702a9 .
+
+km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 .
+
+km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx25 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx25 .
+
+km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 rr:logicalTable _:node1ficd3vmdx25 ;
+	rr:subjectMap _:node1ficd3vmdx26 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx26 .
+
+_:node1ficd3vmdx26 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme4" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g4-uri}" .
+
+km-dev:PredicateObjectMap_d30dcf52-e0b4-4586-b7a7-8fae1dbc6054 rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_703bce0c-7b0c-4a10-83c3-f9feace9b846 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_703bce0c-7b0c-4a10-83c3-f9feace9b846 .
+
+km-dev:PredicateObjectMap_d30dcf52-e0b4-4586-b7a7-8fae1dbc6054 rr:objectMap km-dev:RefObjectMap_703bce0c-7b0c-4a10-83c3-f9feace9b846 .
+
+km-dev:TriplesMap_4dee93f4-f026-412d-8ae9-019ca3727099 rr:predicateObjectMap km-dev:PredicateObjectMap_d30dcf52-e0b4-4586-b7a7-8fae1dbc6054 .
+
+km-dev:PredicateObjectMap_d30dcf52-e0b4-4586-b7a7-8fae1dbc6054 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d30dcf52-e0b4-4586-b7a7-8fae1dbc6054 .
+
+km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 .
+
+km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx27 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx27 .
+
+km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 rr:logicalTable _:node1ficd3vmdx27 ;
+	rr:subjectMap _:node1ficd3vmdx28 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx28 .
+
+_:node1ficd3vmdx28 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme5" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g5-uri}" .
+
+km-dev:PredicateObjectMap_b89af5b4-3216-4cc8-83a7-8e179bfaad28 rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_7ca1cc1c-46e1-4285-ba96-248e1b7078cd a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_7ca1cc1c-46e1-4285-ba96-248e1b7078cd .
+
+km-dev:PredicateObjectMap_b89af5b4-3216-4cc8-83a7-8e179bfaad28 rr:objectMap km-dev:RefObjectMap_7ca1cc1c-46e1-4285-ba96-248e1b7078cd .
+
+km-dev:TriplesMap_14036a16-77fa-45c9-b981-6bcac13e5491 rr:predicateObjectMap km-dev:PredicateObjectMap_b89af5b4-3216-4cc8-83a7-8e179bfaad28 .
+
+km-dev:PredicateObjectMap_b89af5b4-3216-4cc8-83a7-8e179bfaad28 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b89af5b4-3216-4cc8-83a7-8e179bfaad28 .
+
+km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 .
+
+km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx29 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx29 .
+
+km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 rr:logicalTable _:node1ficd3vmdx29 ;
+	rr:subjectMap _:node1ficd3vmdx30 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx30 .
+
+_:node1ficd3vmdx30 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme6" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g6-uri}" .
+
+km-dev:PredicateObjectMap_8dbcd601-e5d8-40f4-aae1-30f0cbe24cbc rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_b777faa9-0452-45b9-afeb-c3cd08d19dbe a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_b777faa9-0452-45b9-afeb-c3cd08d19dbe .
+
+km-dev:PredicateObjectMap_8dbcd601-e5d8-40f4-aae1-30f0cbe24cbc rr:objectMap km-dev:RefObjectMap_b777faa9-0452-45b9-afeb-c3cd08d19dbe .
+
+km-dev:TriplesMap_7d49c1f5-076e-4813-b40c-6990bd5825b8 rr:predicateObjectMap km-dev:PredicateObjectMap_8dbcd601-e5d8-40f4-aae1-30f0cbe24cbc .
+
+km-dev:PredicateObjectMap_8dbcd601-e5d8-40f4-aae1-30f0cbe24cbc a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8dbcd601-e5d8-40f4-aae1-30f0cbe24cbc .
+
+km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e .
+
+km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx31 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx31 .
+
+km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e rr:logicalTable _:node1ficd3vmdx31 ;
+	rr:subjectMap _:node1ficd3vmdx32 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx32 .
+
+_:node1ficd3vmdx32 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Grapheme7" ;
+	rr:class cco:Grapheme ;
+	rr:template "{g7-uri}" .
+
+km-dev:PredicateObjectMap_d3473a03-a09b-4751-8e0e-3e28e2bcf2bd rr:predicate cco:is_a_nominal_measurement_of .
+
+km-dev:RefObjectMap_e41dd2be-1e87-48f5-a055-9c16d200412c a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_e41dd2be-1e87-48f5-a055-9c16d200412c .
+
+km-dev:PredicateObjectMap_d3473a03-a09b-4751-8e0e-3e28e2bcf2bd rr:objectMap km-dev:RefObjectMap_e41dd2be-1e87-48f5-a055-9c16d200412c .
+
+km-dev:TriplesMap_7208f276-fc9e-4302-a3dd-f59c0b47474e rr:predicateObjectMap km-dev:PredicateObjectMap_d3473a03-a09b-4751-8e0e-3e28e2bcf2bd .
+
+km-dev:PredicateObjectMap_d3473a03-a09b-4751-8e0e-3e28e2bcf2bd a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d3473a03-a09b-4751-8e0e-3e28e2bcf2bd .
+
+km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 .
+
+km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx33 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx33 .
+
+km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 rr:logicalTable _:node1ficd3vmdx33 ;
+	rr:subjectMap _:node1ficd3vmdx34 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx34 .
+
+_:node1ficd3vmdx34 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/IPAPhonemeDesignator1" ;
+	rr:class cco:IPAPhonemeDesignator ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:IPAPhonemeDesignator1" .
+
+km-dev:PredicateObjectMap_0098ede8-48f1-4498-9708-f48fad1ea0a2 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx35 rr:column "Phoneme" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx35 .
+
+km-dev:PredicateObjectMap_0098ede8-48f1-4498-9708-f48fad1ea0a2 rr:objectMap _:node1ficd3vmdx35 .
+
+km-dev:TriplesMap_311f850b-1796-417a-b683-0f31a8ab4126 rr:predicateObjectMap km-dev:PredicateObjectMap_0098ede8-48f1-4498-9708-f48fad1ea0a2 .
+
+km-dev:PredicateObjectMap_0098ede8-48f1-4498-9708-f48fad1ea0a2 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0098ede8-48f1-4498-9708-f48fad1ea0a2 .
+
+km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 .
+
+km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx36 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx36 .
+
+km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 rr:logicalTable _:node1ficd3vmdx36 ;
+	rr:subjectMap _:node1ficd3vmdx37 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx37 .
+
+_:node1ficd3vmdx37 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph1" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph1" .
+
+km-dev:PredicateObjectMap_e522faae-e709-4ecd-83e0-fe60e37f44ec rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx38 rr:column "Graphemes: G1" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx38 .
+
+km-dev:PredicateObjectMap_e522faae-e709-4ecd-83e0-fe60e37f44ec rr:objectMap _:node1ficd3vmdx38 .
+
+km-dev:TriplesMap_694fd2f6-0db0-4496-a252-5940a1aaf9a8 rr:predicateObjectMap km-dev:PredicateObjectMap_e522faae-e709-4ecd-83e0-fe60e37f44ec .
+
+km-dev:PredicateObjectMap_e522faae-e709-4ecd-83e0-fe60e37f44ec a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_e522faae-e709-4ecd-83e0-fe60e37f44ec .
+
+km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 .
+
+km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx39 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx39 .
+
+km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 rr:logicalTable _:node1ficd3vmdx39 ;
+	rr:subjectMap _:node1ficd3vmdx40 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx40 .
+
+_:node1ficd3vmdx40 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph2" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph2" .
+
+km-dev:PredicateObjectMap_bcc8ea4f-c126-4c5c-b441-f5f9a8b4b5f1 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx41 rr:column "G2" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx41 .
+
+km-dev:PredicateObjectMap_bcc8ea4f-c126-4c5c-b441-f5f9a8b4b5f1 rr:objectMap _:node1ficd3vmdx41 .
+
+km-dev:TriplesMap_b4b6a7ba-4b7e-426e-abe4-4a83c71c85f2 rr:predicateObjectMap km-dev:PredicateObjectMap_bcc8ea4f-c126-4c5c-b441-f5f9a8b4b5f1 .
+
+km-dev:PredicateObjectMap_bcc8ea4f-c126-4c5c-b441-f5f9a8b4b5f1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_bcc8ea4f-c126-4c5c-b441-f5f9a8b4b5f1 .
+
+km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 .
+
+km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx42 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx42 .
+
+km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 rr:logicalTable _:node1ficd3vmdx42 ;
+	rr:subjectMap _:node1ficd3vmdx43 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx43 .
+
+_:node1ficd3vmdx43 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph3" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph3" .
+
+km-dev:PredicateObjectMap_8f7cc9ed-6537-4a0f-a93d-784c6bf0f75d rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx44 rr:column "G3" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx44 .
+
+km-dev:PredicateObjectMap_8f7cc9ed-6537-4a0f-a93d-784c6bf0f75d rr:objectMap _:node1ficd3vmdx44 .
+
+km-dev:TriplesMap_611652cc-5a53-4ed7-9ee7-ad937cd3e036 rr:predicateObjectMap km-dev:PredicateObjectMap_8f7cc9ed-6537-4a0f-a93d-784c6bf0f75d .
+
+km-dev:PredicateObjectMap_8f7cc9ed-6537-4a0f-a93d-784c6bf0f75d a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_8f7cc9ed-6537-4a0f-a93d-784c6bf0f75d .
+
+km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 .
+
+km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx45 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx45 .
+
+km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 rr:logicalTable _:node1ficd3vmdx45 ;
+	rr:subjectMap _:node1ficd3vmdx46 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx46 .
+
+_:node1ficd3vmdx46 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph4" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph4" .
+
+km-dev:PredicateObjectMap_0155c434-a2ed-4dbb-bdcf-bf84cddf5cf4 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx47 rr:column "G4" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx47 .
+
+km-dev:PredicateObjectMap_0155c434-a2ed-4dbb-bdcf-bf84cddf5cf4 rr:objectMap _:node1ficd3vmdx47 .
+
+km-dev:TriplesMap_1ef5070d-85c7-4661-b4b0-ff0add5d2474 rr:predicateObjectMap km-dev:PredicateObjectMap_0155c434-a2ed-4dbb-bdcf-bf84cddf5cf4 .
+
+km-dev:PredicateObjectMap_0155c434-a2ed-4dbb-bdcf-bf84cddf5cf4 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0155c434-a2ed-4dbb-bdcf-bf84cddf5cf4 .
+
+km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 .
+
+km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx48 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx48 .
+
+km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 rr:logicalTable _:node1ficd3vmdx48 ;
+	rr:subjectMap _:node1ficd3vmdx49 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx49 .
+
+_:node1ficd3vmdx49 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph5" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph5" .
+
+km-dev:PredicateObjectMap_aab910ab-1140-4e99-bfaf-dd932ebe1019 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx50 rr:column "G5" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx50 .
+
+km-dev:PredicateObjectMap_aab910ab-1140-4e99-bfaf-dd932ebe1019 rr:objectMap _:node1ficd3vmdx50 .
+
+km-dev:TriplesMap_a56f0e1d-af13-42db-85cd-f90bdff13d62 rr:predicateObjectMap km-dev:PredicateObjectMap_aab910ab-1140-4e99-bfaf-dd932ebe1019 .
+
+km-dev:PredicateObjectMap_aab910ab-1140-4e99-bfaf-dd932ebe1019 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_aab910ab-1140-4e99-bfaf-dd932ebe1019 .
+
+km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa .
+
+km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx51 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx51 .
+
+km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa rr:logicalTable _:node1ficd3vmdx51 ;
+	rr:subjectMap _:node1ficd3vmdx52 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx52 .
+
+_:node1ficd3vmdx52 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph6" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph6" .
+
+km-dev:PredicateObjectMap_fe2cbee7-fd4b-4033-b9cd-4d463b1562e1 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx53 rr:column "G6" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx53 .
+
+km-dev:PredicateObjectMap_fe2cbee7-fd4b-4033-b9cd-4d463b1562e1 rr:objectMap _:node1ficd3vmdx53 .
+
+km-dev:TriplesMap_1b91b876-44c8-47f0-89ad-3b9c77e1cfaa rr:predicateObjectMap km-dev:PredicateObjectMap_fe2cbee7-fd4b-4033-b9cd-4d463b1562e1 .
+
+km-dev:PredicateObjectMap_fe2cbee7-fd4b-4033-b9cd-4d463b1562e1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fe2cbee7-fd4b-4033-b9cd-4d463b1562e1 .
+
+km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c .
+
+km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx54 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx54 .
+
+km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c rr:logicalTable _:node1ficd3vmdx54 ;
+	rr:subjectMap _:node1ficd3vmdx55 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx55 .
+
+_:node1ficd3vmdx55 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Glyph7" ;
+	rr:class cco:Glyph ;
+	rr:termType rr:BlankNode ;
+	km-dev:namePrefix "cco:Glyph7" .
+
+km-dev:PredicateObjectMap_dfc4877a-5efc-44a4-8802-9c58ea4135b6 rr:predicate cco:has_text_value .
+
+_:node1ficd3vmdx56 rr:column "G7" ;
+	a rr:ObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap _:node1ficd3vmdx56 .
+
+km-dev:PredicateObjectMap_dfc4877a-5efc-44a4-8802-9c58ea4135b6 rr:objectMap _:node1ficd3vmdx56 .
+
+km-dev:TriplesMap_5bd7e570-18ef-4e48-aab8-854d12a1e89c rr:predicateObjectMap km-dev:PredicateObjectMap_dfc4877a-5efc-44a4-8802-9c58ea4135b6 .
+
+km-dev:PredicateObjectMap_dfc4877a-5efc-44a4-8802-9c58ea4135b6 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dfc4877a-5efc-44a4-8802-9c58ea4135b6 .
+
+km-dev:TriplesMap_5a2f24ed-12c5-4c8c-94b8-893544532619 a rr:TriplesMap .
+
+_:node1ficd3vmdx1 km-dev:hasTriplesMap km-dev:TriplesMap_5a2f24ed-12c5-4c8c-94b8-893544532619 .
+
+km-dev:TriplesMap_5a2f24ed-12c5-4c8c-94b8-893544532619 km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx57 rr:tableName "44phonemes-modified.csv" ;
+	a rr:LogicalTable ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasLogicalTable _:node1ficd3vmdx57 .
+
+km-dev:TriplesMap_5a2f24ed-12c5-4c8c-94b8-893544532619 rr:logicalTable _:node1ficd3vmdx57 ;
+	rr:subjectMap _:node1ficd3vmdx58 .
+
+_:node1ficd3vmdx1 km-dev:hasSubjectMap _:node1ficd3vmdx58 .
+
+_:node1ficd3vmdx58 km-dev:isPartOfMapping _:node1ficd3vmdx1 ;
+	a rr:SubjectMap ;
+	km-dev:alignmentNodeId "http://www.ontologyrepository.com/CommonCoreOntologies/Phone1" ;
+	rr:class cco:Phone ;
+	rr:template "{phone_ID}" ;
+	a km-dev:steinerTreeRootNode .
+
+km-dev:PredicateObjectMap_10ca6fe5-0d40-47d4-af53-3a19634ac223 rr:predicate cco:is_measured_by_nominal .
+
+km-dev:RefObjectMap_c276dfed-249d-4801-81d7-1a2f007ce2b3 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_986d34b2-82af-440c-81cc-05252d745082 ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasObjectMap km-dev:RefObjectMap_c276dfed-249d-4801-81d7-1a2f007ce2b3 .
+
+km-dev:PredicateObjectMap_10ca6fe5-0d40-47d4-af53-3a19634ac223 rr:objectMap km-dev:RefObjectMap_c276dfed-249d-4801-81d7-1a2f007ce2b3 .
+
+km-dev:TriplesMap_5a2f24ed-12c5-4c8c-94b8-893544532619 rr:predicateObjectMap km-dev:PredicateObjectMap_10ca6fe5-0d40-47d4-af53-3a19634ac223 .
+
+km-dev:PredicateObjectMap_10ca6fe5-0d40-47d4-af53-3a19634ac223 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1ficd3vmdx1 .
+
+_:node1ficd3vmdx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_10ca6fe5-0d40-47d4-af53-3a19634ac223 .
